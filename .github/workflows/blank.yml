@@ -15,7 +15,7 @@ jobs:
       - name: Debug OIDC Claims
         uses: ./.github/actions/actions-oidc-debugger
         with:
-          audience: 'https://github.com/*'
+          audience: 'sts.amazonaws.com'
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::206429775942:role/git_hub
