@@ -15,9 +15,9 @@ jobs:
       - name: Debug OIDC Claims
         uses: ./.github/actions/actions-oidc-debugger
         with:
-          audience: 'https://github.com/github'
+          audience: 'https://github.com/*'
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::206429775942:role/git_hub
-          aws-region: ap-northeast-1
+          aws-region: us-east-1
       - run: aws sts get-caller-identity
